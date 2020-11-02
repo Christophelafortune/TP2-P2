@@ -8,13 +8,16 @@ public class Utilisateur {
     public byte[] hashMotDePasse;
 
 
-    //Constructuer
+    //Constructeur
     public Utilisateur(String nomUtilisateur, String motDePasse,
                        String numeroDeCompte, double solde){
 
         this.nomUtilisateur = nomUtilisateur;
         this.numeroDeCompte = numeroDeCompte;
         this.solde = solde;
+        this.salt = UtilitairesDB.obtenirSalt();
+        this.hashMotDePasse = UtilitairesDB.hashMotDePasse(motDePasse,salt);
+
 
 
     }
@@ -65,18 +68,22 @@ public class Utilisateur {
 
     private boolean validerMotDePasse(String motDePasse) {
 
+        boolean valider = false;
+
+
+
         return  false;
 
     }
 
-    private boolean validerNomUtilisateur(String nomUtilisateur ) {
+    private boolean validerNomUtilisateur(String nomUtilisateur) {
 
         return  this.nomUtilisateur == nomUtilisateur;
     }
 
 
     public void transactionSurSolde(double differentiel){
-
+        solde = solde + differentiel;
     }
 
     public String toString(){

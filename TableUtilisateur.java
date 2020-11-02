@@ -1,27 +1,24 @@
 public class TableUtilisateur {
 
-    public void nomUtilisateur(){
+    public String nomUtilisateur;
+    public byte [] hashMotDePasse;
+    public byte [] salt;
+    public String numerodeCompte;
+    public double solde;
+
+
+    public void ajouterUnUtilisateur(Utilisateur utilisateur){
+        Utilisateur ajoutUtilisateur =
+                new Utilisateur(utilisateur.nomUtilisateur,
+                        utilisateur.hashMotDePasse,utilisateur.salt,
+                        utilisateur.numeroDeCompte, utilisateur.solde);
 
     }
-    public void hashMotDePasse(){
+    public void obtenirUtilisateurParNom(Utilisateur utilisateur){
+
 
     }
-    public void salt(){
-
-    }
-    public void numerodeCompte(){
-
-    }
-    public void solde(){
-
-    }
-    public void ajouterUnUtilisateur(){
-
-    }
-    public void obtenirUtilisateurParNom(){
-
-    }
-    public void obtenirUtilisateurParCompte(){
+    public void obtenirUtilisateurParCompte(Utilisateur utilisateur){
 
     }
 }

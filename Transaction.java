@@ -27,6 +27,7 @@ public class Transaction {
         this.montant = montant;
         this.noCompteDestination = noCompteDestination;
         this.noCompteSource = noCompteSource;
+        this.statut = A_DETERMINER;
 
     }
 
@@ -39,7 +40,7 @@ public class Transaction {
 
        return this.noCompteDestination ;
     }
-    public double GetMontant (){
+    public double GetMontant(){
 
        return this.montant;
 

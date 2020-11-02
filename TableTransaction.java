@@ -1,21 +1,24 @@
-public class TableTransaction {
+public class TableTransaction{
 
-    public void noCompteSoucre(){
+    public String noCompteSoucre;
+    public String noComteDestination;
+    public double montants;
+    public String status;
 
-    }
-    public void noComteDestination(){
-
-    }
-    public void montants(){
-
-    }
-    public void status(){
-
-    }
-    public void ajouterUneTransaction(){
+    public void ajouterUneTransaction(Transaction transaction){
+      Transaction ajoutTransaction = new Transaction(transaction.noCompteSource,
+              transaction.noCompteDestination,transaction.montant,
+              transaction.statut);
 
     }
-    public void obtenirTransactionPourCompte(){
+    public void obtenirTransactionPourCompte(Transaction transaction){
+
+        transaction.GetNoCompteDestination();
+        transaction.GetNoCompteSource();
+        transaction.GetMontant();
+        transaction.GetStatus();
+
+
 
     }
 }

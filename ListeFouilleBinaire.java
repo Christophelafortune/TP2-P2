@@ -2,8 +2,8 @@
  *Cette classe permet d'insérer la valeur en ordre croissant et la position
  * d'une valeur demandé dans le tableau.
  *
- * @author Alexandre Ferland, Alexandre Lemyre, Christrophe lafortune
- * et Albert le Grand Chuenteu Tchouli,
+ * @author Alexandre Ferland, Alexandre Lemyre et Christrophe lafortune
+ *
  * @version 20 octobre 2020
  */
 
